@@ -14,7 +14,7 @@ var arrayGen = []
 function writePassword() {
   var password = passwordPrompt();
   var passwordText = document.querySelector("#password");
-
+  
   passwordText.value = arrayGen;
 
 }
@@ -32,10 +32,11 @@ function passwordPrompt(){
   if (inputNum >= 8 && inputNum <= 128) {
     Prompt()
   }
-  else if (inputNum < 8 || inputNum > 128) {
+  else  {
     alert("Please input a number between 8-128")
     passwordPrompt()
     }
+  
     }  
     
     
