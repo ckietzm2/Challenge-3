@@ -1,4 +1,5 @@
 // Assignment Code
+// variable creator
 var generateBtn = document.querySelector("#generate");
 var passwordLowLetters = ["abcdefghijklmnopqrstuvwxyz"]
 var passwordUpLetters = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"]
@@ -27,8 +28,11 @@ function passwordPrompt(){
 
   var passwordNum = prompt("How many characters do you want your password to be?", "Please input a number between 8-128");
   
+  //converts input to a number
   inputNum = parseInt(passwordNum);
 
+  
+  //checks if input value falls within range
   if (inputNum >= 8 && inputNum <= 128) {
     Prompt()
   }
@@ -39,7 +43,7 @@ function passwordPrompt(){
   
     }  
     
-    
+    //prompts for password criteria
     function Prompt() {
     
       var passwordLow = confirm("Do you want lowercase letters?")
@@ -76,10 +80,10 @@ function passwordPrompt(){
     }
    
    
-  
+  // will be used for random numberr generator.  Subtracted 1 because arrays start at 0
   answerValue = answerValue-1
    
-  
+  // makes sure one of the password options is picked
 if (answerValue === -1) {
   alert("Must click OK on one of the password options!")
   passwordPrompt()  
@@ -88,7 +92,7 @@ else if (answerValue != -1)
  
 finalPassword()
 }
-
+// creates a random number based on lenght of my final array that included all user input password options
 function finalPassword() {
   
   for (arrayGen.length=0; arrayGen.length< inputNum; arrayGen.length++) {
